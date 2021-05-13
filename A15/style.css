@@ -1,0 +1,97 @@
+#header {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 85%;
+}
+#header .title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+#header .title img {
+    max-width: 3em;
+}
+#header .title h2 {
+    padding-left: 0.5em;
+}
+#header .score {
+    margin: 0;
+    color: #6c90ac;
+}
+#header .tried {
+    margin-top: 0;
+}
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+}
+.card{
+    /* flex item排版 */
+    flex: 7% 1 1; /* 基準flex-basis: 7%; 伸展flex-grow: 0; 收縮flex-shrink: 1;因為 flex 是高容錯的設計，而這裡指定 7% 和 flex-shink & flex-grow 預期吃到的參數格式不一樣，因此自動當成了 flex-basis 的值。https://medium.com/tds-note/about-flex-shorthand-3fe34690ac1b*/
+    height: 8vw;
+    border: 2px solid #e0e0e0;
+    margin: 2px;
+    box-sizing: border-box;
+
+    /* 卡片內部 數字與花色的排版 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card img{
+    max-width: 30%;
+    align-self: center;
+}
+.card p{
+    margin: 3px;
+    font-size: 10px;
+}
+.card p:last-child{
+    transform: rotate(180deg);
+}
+.back{
+    background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+    background-size: cover;
+}
+.paired {
+    background-color: #dae0e3;
+  }
+.wrong {
+    animation-name: wrongAnimation;
+    animation-duration: 0.2s; /*持續g時間*/
+    animation-iteration-count: 5; /*重覆 5次數*/
+ }
+@keyframes wrongAnimation {
+    to {
+      border: 2px solid #ffd54f;
+    }
+  }
+
+  /*
+  keyframes 可以用 from 和 to 來指定動畫漸變起點/終點，使用 to 來指定「當動畫發生時，該元素要逐漸加上黃色邊框」
+  */
+
+/** Game finished **/
+.completed {
+    position: absolute;
+    z-index: 999;
+    top: 33vh;
+    background-color: RGBA(232, 246, 254, 0.8);
+    width: 100vw;
+    padding: 50px 0;
+  }
+  .completed > p {
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    margin: 0;
+  }
+  .completed > p:first-child {
+    font-size: 3em;
+    font-weight: 700;
+    color: #758d9a;
+  }
