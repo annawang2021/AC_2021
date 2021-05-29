@@ -94,14 +94,6 @@ function addToFavorite(id){
   localStorage.setItem('favoriteMovies', JSON.stringify(list)) 
 }
 
-// 使用 local storage 來建立一個清單，key 值是 'favoriteMovies'，而 value 則是使用者收藏的電影。
-//取出資料localStorage.getItem() 
-//存入資料localStorage.setItem() 
-//JSON.parse()將 JSON 格式的字串轉回 JavaScript 原生物件。
-//JSON.stringify()將資料轉為 JSON 格式的字串。
-
-
-
 
 // search bar功能鍵立
 //1. 取得search bar中，input標籤的值
