@@ -4,7 +4,7 @@ To-do List example
 
 https://annawang2021.github.io/AC_Project_2021/A4/A4.html
 
-Create as many as to-dos as users want
+Create as many to-dos as users want
 
 Click the 'trash can' button if the to-do is done
 
