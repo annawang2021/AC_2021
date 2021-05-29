@@ -1,0 +1,59 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('alphaPos-bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+
+.container {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  margin: auto;
+}
+
+/* delete drink icon */
+[data-alpha-pos="delete-drink"] {
+  display: inline-block;
+  text-align: center;
+  color: #999;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  line-height: 1;
+}
+  
+[data-alpha-pos="delete-drink"]:hover {
+  color: rgb(255, 6, 6);
+}
+
+/* right side order list  */
+.menu .card-body {
+  cursor: pointer;
+}
+
+.menu .card:hover {
+  box-shadow: 10px 10px rgb(219, 18, 102);
+}
+
+[type="radio"] {
+  vertical-align: bottom;
+  border: 1px solid red;
+}
+
+.row {
+  max-height: 800px;
+}
+
+
+
+.col-md-4 {
+  overflow-y: auto;
+  max-height: 580px;
+  overflow-y: scroll;
+    
+}
+
