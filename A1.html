@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尋找API接口:Q1 愛狗人士專用 API</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <style>
+        button{
+             /* margin-left: 2vw; */
+            text-align: center;
+            padding: 3px 3px;
+            /* border: 1px solid black; */
+        }
+        
+        img{
+            display: block;
+            margin: auto auto;
+        }
+     
+        section h3{
+            text-align: center;
+            margin:3vh 2vw;
+            /* border: 1px solid black; */
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid black; */
+        }
+        .fas{
+            /* border: 1px solid black; */
+            display: inline;
+            padding: 0%;
+            margin: 0%;
+        }
+    </style>
+</head>
+<body>
+    
+        <section>
+            <i class="fas fa-dog fa-lg" ></i><h3>Cute Dog Images</h3>
+            <button>Refresh</button>
+        </section>
+        
+        <img/>
+    
+    
+    
+    
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        let btn = document.querySelector('button');
+        let img = document.querySelector('img');
+        btn.addEventListener('click', function(){
+            axios.get('https://dog.ceo/api/breeds/image/random')
+            .then(function(response){
+                let imgSrc = response.data.message;
+
+                img.setAttribute("src", imgSrc);
+
+            }).catch(function(error){
+                console.log(error);
+            });
+        })
+            
+  
+    </script>
+</body>
+</html>
