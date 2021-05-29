@@ -10,7 +10,7 @@ and features:
   3. paginator
   4. search bar 
   
-  https://annawang2021.github.io/AC_Project_2021/Movie List/index.html
+  https://annawang2021.github.io/AC_Project_2021/MovieList/index.html
   
   ![image](https://user-images.githubusercontent.com/77376405/120076869-494b3080-c0da-11eb-8990-4babc61994a7.png)
 
