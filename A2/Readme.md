@@ -1,6 +1,6 @@
 A2_Q1
 
-Based on A1_Q2 
+Based on A1_Q2 (https://github.com/annawang2021/AC_Project_2021/tree/main/A1)
 
 click 'Created Random Users' to display 3 random female users
 
