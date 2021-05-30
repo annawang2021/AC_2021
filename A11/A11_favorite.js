@@ -35,10 +35,11 @@ function renderPeopleList(data) {
 dataPanel.addEventListener('click', function onPanelClicked(event){ 
     if (event.target.matches('#show-details')) {
         showDetails(Number(event.target.dataset.id))
-        return
-    }else if (event.target.matches('#btn-remove-favorite'))
-        console.log(event.target.dataset.id)
+        
+    }else if (event.target.matches('#btn-remove-favorite')) {
         removeFromFavorite(Number(event.target.dataset.id))
+        
+    }
 })
 
 
