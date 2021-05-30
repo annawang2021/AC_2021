@@ -1,6 +1,6 @@
 A11.html
 
-Basde on Move List project (https://github.com/annawang2021/AC_Project_2021/tree/main/Movie%20List)
+Basde on Movie List project (https://github.com/annawang2021/AC_Project_2021/tree/main/Movie%20List)
 Using: 
   1. axios to fetch API
   2. bootstrap card, and modal to show more details
