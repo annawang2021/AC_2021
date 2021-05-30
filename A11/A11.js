@@ -38,7 +38,7 @@ function renderPeopleList(data) {
 
 
 // 監聽 data panel
-dataPanel.addEventListener('click',function onPanelClicked(event){ 
+dataPanel.addEventListener('click', function onPanelClicked (event){ 
     if (event.target.matches('.btn-show-details')) {
         const id = event.target.dataset.id;
         console.log(id)
@@ -47,8 +47,8 @@ dataPanel.addEventListener('click',function onPanelClicked(event){
         const newId = event.target.dataset.id;
         showDetails(newId);
     }else if (event.target.matches('#heart_icon')) {//點擊愛心 加入收藏頁
-        const heart_icon = Number(event.target.dataset.id)
-        addToFavorite(heart_icon )
+        const heart_icon_id = Number(event.target.dataset.id)
+        addToFavorite(heart_icon_id )
       }
     
   })
@@ -61,6 +61,7 @@ dataPanel.addEventListener('click',function onPanelClicked(event){
     const modalRegion = document.querySelector('#person-modal-region')
     const modalEmail = document.querySelector('#person-modal-email')
     const modalStarSign = document.querySelector ('#person-modal-starSign')
+    const modalHeartIcon = document.querySelector('#modal_heart_icon')
 
     axios.get(POSTER_URL + id).then((response) => {
         const data = response.data      
@@ -83,8 +84,24 @@ dataPanel.addEventListener('click',function onPanelClicked(event){
         modalRegion.innerText = 'Region: ' + data.region
         modalEmail.innerText = 'Email: ' + data.email
         modalImage.innerHTML = `<img src="${data.avatar}" alt="person-poster" class="rounded-circle mx-auto">`
+        modalHeartIcon.setAttribute('data-id', `${id}`)
     })
+
+  
+    
 }
+
+//personModal heartbtn function
+const personModal = document.querySelector('#person-modal')
+personModal.addEventListener('click', function modalHeartBtn (event) {
+    // console.log (event.target)
+    if (event.target.matches('#modal_heart_icon')) {
+        console.log ('#modal_heart_icon')
+        addToFavorite(Number(event.target.dataset.id))
+        
+    }
+})
+
 
 //加入我的最愛到local storage
 function addToFavorite(id){
@@ -96,7 +113,7 @@ function addToFavorite(id){
     }
     list.push(individual)
     localStorage.setItem('favorite', JSON.stringify(list)) 
-  }
+}
 
 
 //判斷星座
