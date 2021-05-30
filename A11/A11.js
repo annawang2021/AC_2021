@@ -16,7 +16,6 @@ const dataPanel = document.querySelector('#data-panel')
 function renderPeopleList(data) {
     let rawHTML = ''
     data.forEach((item) => {
-        // console.log(item.avatar)
         rawHTML += `
         <div class="col-3 text-center">
             <div class="mb-2">
@@ -41,7 +40,6 @@ function renderPeopleList(data) {
 dataPanel.addEventListener('click', function onPanelClicked (event){ 
     if (event.target.matches('.btn-show-details')) {
         const id = event.target.dataset.id;
-        console.log(id)
         showDetails(id); 
     }else if (event.target.matches('#show-details')){ //點擊大頭照跳出介紹細節
         const newId = event.target.dataset.id;
@@ -96,7 +94,6 @@ const personModal = document.querySelector('#person-modal')
 personModal.addEventListener('click', function modalHeartBtn (event) {
     // console.log (event.target)
     if (event.target.matches('#modal_heart_icon')) {
-        console.log ('#modal_heart_icon')
         addToFavorite(Number(event.target.dataset.id))
         
     }
