@@ -92,7 +92,6 @@ dataPanel.addEventListener('click', function onPanelClicked (event){
 //personModal heartbtn function
 const personModal = document.querySelector('#person-modal')
 personModal.addEventListener('click', function modalHeartBtn (event) {
-    // console.log (event.target)
     if (event.target.matches('#modal_heart_icon')) {
         addToFavorite(Number(event.target.dataset.id))
         
