@@ -4,6 +4,7 @@ Movie list uses:
   1. axios to fetch API
   2. bootstrap card, paginator
   3. local storage to store user's favorite movies into collection
+  
 and features:
   1. 'More' button to read more details about each movie
   2. '+' button to add movies to your collection as users can read in 'Favorite' tab
